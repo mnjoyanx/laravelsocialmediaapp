@@ -1,7 +1,6 @@
 <?php
 
 use Illuminate\Support\Facades\Route;
-use App\Http\Controllers\HomeController;
 
 /*
 |--------------------------------------------------------------------------
@@ -15,3 +14,8 @@ use App\Http\Controllers\HomeController;
 */
 
 Route::get('/', 'HomeController@index')->name('home');
+
+
+// Registration
+Route::get('/signup', 'AuthController@getSignUp')->name('auth.signUp');
+Route::post('/signup', 'AuthController@postSignUp');
